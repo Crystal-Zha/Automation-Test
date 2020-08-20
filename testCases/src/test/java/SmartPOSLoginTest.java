@@ -3,11 +3,15 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import page.LoginPage;
 
+import java.net.MalformedURLException;
+
 public class SmartPOSLoginTest extends BaseTest {
     //STEP1:
     @Test
-    public void login(){
-        LoginPage loginPage = new LoginPage(element);
+    public void login() throws MalformedURLException {
+        LoginPage loginPage = new LoginPage(driver);
+
+        loginPage.loginToHomePage("1101101", "Hcc333333");
 
     }
 

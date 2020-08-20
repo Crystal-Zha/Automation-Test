@@ -1,20 +1,11 @@
 package server.appium;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.ServerSocket;
 import java.net.URL;
-import java.util.logging.Logger;
 
 public class AppiumDriverFactory {
 
@@ -74,7 +65,7 @@ public class AppiumDriverFactory {
 //
 //    }
 
-    public void getDriver() throws MalformedURLException {
+    public AndroidDriver<WebElement> getDriver() throws MalformedURLException {
         //1.创建配置对象
         cap = new DesiredCapabilities();
         //2.往配置对象添加配置
@@ -95,6 +86,7 @@ public class AppiumDriverFactory {
         //第二个参数：配置对象
         AndroidDriver<WebElement> androidDriver = new AndroidDriver<WebElement>(
                 new URL("http://127.0.0.1:4723/wd/hub"), cap);
+        return androidDriver;
     }
 
 
