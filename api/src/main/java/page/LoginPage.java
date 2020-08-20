@@ -1,28 +1,25 @@
 package page;
 
+import common.MobileButton;
 import common.MobileTextBox;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import server.appium.AppiumDriverFactory;
 
 public class LoginPage {
 
     //homerID
     //@AndroidFindBy = driver.findElementById
     @AndroidFindBy(id = "cz.adastragrp.hccn:id/email")
-    private MobileTextBox homerID;
+    private MobileTextBox tbHomerID;
 
 
     @AndroidFindBy(id = "cz.adastragrp.hccn:id/password")
-    private MobileTextBox password;
+    private MobileTextBox tbPassword;
 
     @AndroidFindBy(id = "cz.adastragrp.hccn:id/btn_login")
-    private MobileTextBox loginButton;
+    private MobileButton loginButton;
 
 //    WebDriver driver;
 //
@@ -41,13 +38,12 @@ public class LoginPage {
     }
 
 
-    public void inputHomerID(String homerID) {
-        this.homerID.click();
-        this.homerID.input(homerID);
+    public void inputHomerID(String homerId) {
+        tbHomerID.input(homerId);
     }
 
     public void inputPassword(String password) {
-        this.password.input(password);
+        this.tbPassword.input(password);
     }
 
     public void clickLoginButton() {
