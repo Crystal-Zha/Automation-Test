@@ -1,5 +1,6 @@
 package server.appium;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -65,7 +66,7 @@ public class AppiumDriverFactory {
 //
 //    }
 
-    public AndroidDriver<WebElement> getDriver() throws MalformedURLException {
+    public AndroidDriver<MobileElement> getDriver() throws MalformedURLException {
         //1.创建配置对象
         cap = new DesiredCapabilities();
         //2.往配置对象添加配置
@@ -84,7 +85,7 @@ public class AppiumDriverFactory {
         //传入2个参数
         //第一个参数：Appium通讯地址
         //第二个参数：配置对象
-        AndroidDriver<WebElement> androidDriver = new AndroidDriver<WebElement>(
+        AndroidDriver<MobileElement> androidDriver = new AndroidDriver<MobileElement>(
                 new URL("http://127.0.0.1:4723/wd/hub"), cap);
         return androidDriver;
     }
