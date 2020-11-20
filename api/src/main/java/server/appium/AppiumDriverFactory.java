@@ -71,15 +71,15 @@ public class AppiumDriverFactory {
         cap = new DesiredCapabilities();
         //2.往配置对象添加配置
         //deviceName:找到测试的设备
-        cap.setCapability("deviceName", "b7e3cf31");
+        cap.setCapability("deviceName", "UYT0217A10002648");
         //platformName:测试平台Android或者IOS
         cap.setCapability("platformName", "Android");
         //appPackage: app的包名
-        cap.setCapability("appPackage", "cz.adastragrp.hccn");
+        cap.setCapability("appPackage", "com.ihealthlabs.MyVitalsPro");
         //自动化引擎
         cap.setCapability("automationName","uiautomator2");
         //appActivity：app启动的入口
-        cap.setCapability("appActivity", "cz.adastragrp.hccn.ui.activities.LoginActivity");
+        cap.setCapability("appActivity", "com.ihealth.business.common.welcome.WelcomeActivity");
 
         //3.创建驱动
         //传入2个参数

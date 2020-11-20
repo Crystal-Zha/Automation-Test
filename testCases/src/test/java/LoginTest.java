@@ -6,12 +6,12 @@ import page.PosSelectionPage;
 
 import java.net.MalformedURLException;
 
-public class SmartPOSLoginTest extends BaseTest {
+public class LoginTest extends BaseTest {
     //STEP1:
     @Test
     public void login() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginToHomePage("1101101", "Hcc333333");
+        loginPage.loginToHomePage("test01@gmail.com", "123456");
         PosSelectionPage posSelectionPage = new PosSelectionPage(driver);
         posSelectionPage.selectPOSCode("100579");
 
