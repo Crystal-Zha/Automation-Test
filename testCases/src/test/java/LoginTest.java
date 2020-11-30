@@ -1,5 +1,8 @@
 import io.appium.java_client.android.AndroidElement;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import page.LoginPage;
 import page.PosSelectionPage;
@@ -11,9 +14,9 @@ public class LoginTest extends BaseTest {
     @Test
     public void login() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginToHomePage("test01@gmail.com", "123456");
-        PosSelectionPage posSelectionPage = new PosSelectionPage(driver);
-        posSelectionPage.selectPOSCode("100579");
+        loginPage.loginToHomePage("test01@gmail.com", "12345678");
+
+
 
 
 
